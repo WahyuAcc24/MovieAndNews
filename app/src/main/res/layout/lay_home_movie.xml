@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5DB5B5B5">
+
+
+    <LinearLayout
+        android:id="@+id/news"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@color/biru_tua"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/berita"
+            android:layout_gravity="center_vertical"
+
+            />
+
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Kumpulan Berita"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txthomeatas"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/news"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Genre"
+        android:id="@+id/txtGenre"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtGenre"
+        android:id="@+id/scrolGenre"
+        android:layout_marginTop="10dp"
+        android:scrollbars="horizontal"
+
+        >
+    <LinearLayout
+        android:id="@+id/lngenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnGenreNowPlaying"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/editext_putih"
+            android:text="Tayang Sekarang"
+            android:layout_marginEnd="10dp"
+
+            />
+
+        <Button
+            android:id="@+id/btnGenreAction"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/editext_putih"
+            android:text="Aksi"
+            android:layout_marginEnd="10dp"
+
+            />
+
+        <Button
+            android:id="@+id/btnAnimasiAction"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/editext_putih"
+            android:text="Animasi"
+            android:layout_marginEnd="10dp"
+
+
+            />
+
+        <Button
+            android:id="@+id/btnAdvAction"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/editext_putih"
+            android:text="Petualangan"
+            android:layout_marginEnd="10dp"
+
+
+            />
+
+        <Button
+            android:id="@+id/btnKomediAction"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/editext_putih"
+            android:text="Komedi"
+            android:layout_marginEnd="10dp"
+
+
+            />
+
+        <Button
+            android:id="@+id/btnHororAction"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/editext_putih"
+            android:text="Horor"
+            android:layout_marginEnd="10dp"
+
+
+            />
+
+    </LinearLayout>
+    </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListMovie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/scrolGenre"
+            android:layout_marginTop="20dp"
+
+            />
+
+
+    <ProgressBar
+        android:id="@+id/pbHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        />
+
+
+</RelativeLayout>
