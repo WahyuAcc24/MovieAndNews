@@ -51,10 +51,9 @@ class DetailNewsActivity : AppCompatActivity() {
     lateinit var btn_news: Button
 
 
-
     private var requesQueue: RequestQueue? = null
 
-    private var context : Context? = null
+    private var context: Context? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -81,7 +80,6 @@ class DetailNewsActivity : AppCompatActivity() {
         }
 
 
-
         var data: MNews = Gson().fromJson(
             intent.getStringExtra("datanews"),
             MNews::class.java
@@ -100,12 +98,11 @@ class DetailNewsActivity : AppCompatActivity() {
 
         btn_news.setOnClickListener {
 
-            val intent = Intent(this,WebNewsActivity::class.java)
-            intent.putExtra("urlnews",data.url)
+            val intent = Intent(this, WebNewsActivity::class.java)
+            intent.putExtra("urlnews", data.url)
             startActivity(intent)
 
         }
-
 
 
     }

@@ -43,7 +43,6 @@ class HomeMovieActivity : AppCompatActivity() {
     var btns = arrayOfNulls<Button>(6)
 
 
-
     var model_film: ArrayList<MFilm> = ArrayList()
 
 
@@ -112,7 +111,6 @@ class HomeMovieActivity : AppCompatActivity() {
                         btns[5]?.setTextColor(Color.BLACK)
 
 
-
                     } else {
                         btns[1]?.setBackgroundResource(R.drawable.editext_putih)
                         btns[1]?.setTextColor(Color.BLACK)
@@ -128,7 +126,6 @@ class HomeMovieActivity : AppCompatActivity() {
 
                         btns[5]?.setBackgroundResource(R.drawable.editext_putih)
                         btns[5]?.setTextColor(Color.BLACK)
-
 
 
                     }
@@ -158,7 +155,6 @@ class HomeMovieActivity : AppCompatActivity() {
 
                         btns[5]?.setBackgroundResource(R.drawable.editext_putih)
                         btns[5]?.setTextColor(Color.BLACK)
-
 
 
                     } else {
@@ -205,7 +201,6 @@ class HomeMovieActivity : AppCompatActivity() {
 
                         btns[5]?.setBackgroundResource(R.drawable.editext_putih)
                         btns[5]?.setTextColor(Color.BLACK)
-
 
 
                     } else {
@@ -256,7 +251,6 @@ class HomeMovieActivity : AppCompatActivity() {
                         btns[5]?.setTextColor(Color.BLACK)
 
 
-
                     } else {
 
                         btns[0]?.setBackgroundResource(R.drawable.editext_putih)
@@ -301,7 +295,6 @@ class HomeMovieActivity : AppCompatActivity() {
 
                         btns[5]?.setBackgroundResource(R.drawable.editext_putih)
                         btns[5]?.setTextColor(Color.BLACK)
-
 
 
                     } else {
@@ -350,7 +343,6 @@ class HomeMovieActivity : AppCompatActivity() {
                         btns[4]?.setTextColor(Color.BLACK)
 
 
-
                     } else {
 
                         btns[0]?.setBackgroundResource(R.drawable.editext_putih)
@@ -381,7 +373,7 @@ class HomeMovieActivity : AppCompatActivity() {
     fun getTayangSekarang() {
 
 
-        if (model_film.size > 0){
+        if (model_film.size > 0) {
             model_film.clear()
 
         }
@@ -415,12 +407,12 @@ class HomeMovieActivity : AppCompatActivity() {
 
 
 
-                            data_film.setPoster_path(jsonObject.getString("poster_path"))
-                            data_film.setOverview(jsonObject.getString("overview"))
-                            data_film.setTitle(jsonObject.getString("original_title"))
-                            data_film.setVote_average(jsonObject.getDouble("vote_average"))
+                            data_film.poster_path = jsonObject.getString("poster_path")
+                            data_film.overview = jsonObject.getString("overview")
+                            data_film.title = jsonObject.getString("original_title")
+                            data_film.vote_average = jsonObject.getDouble("vote_average")
 
-                            data_film.setId(jsonObject.getInt("id"))
+                            data_film.id = jsonObject.getInt("id")
 
 
                             (model_film as ArrayList<MFilm>).add(data_film)
@@ -476,7 +468,7 @@ class HomeMovieActivity : AppCompatActivity() {
     fun getGenreAksi() {
 
 
-        if (model_film.size > 0){
+        if (model_film.size > 0) {
             model_film.clear()
 
         }
@@ -509,12 +501,12 @@ class HomeMovieActivity : AppCompatActivity() {
 
 
 
-                            data_film.setPoster_path(jsonObject.getString("poster_path"))
-                            data_film.setOverview(jsonObject.getString("overview"))
-                            data_film.setTitle(jsonObject.getString("original_title"))
-                            data_film.setVote_average(jsonObject.getDouble("vote_average"))
+                            data_film.poster_path = jsonObject.getString("poster_path")
+                            data_film.overview = jsonObject.getString("overview")
+                            data_film.title = jsonObject.getString("original_title")
+                            data_film.vote_average = jsonObject.getDouble("vote_average")
 
-                            data_film.setId(jsonObject.getInt("id"))
+                            data_film.id = jsonObject.getInt("id")
 
 
                             (model_film as ArrayList<MFilm>).add(data_film)
@@ -570,7 +562,7 @@ class HomeMovieActivity : AppCompatActivity() {
     fun getGenreAnimasi() {
 
 
-        if (model_film.size > 0){
+        if (model_film.size > 0) {
             model_film.clear()
 
         }
@@ -601,12 +593,12 @@ class HomeMovieActivity : AppCompatActivity() {
 
 
 
-                            data_film.setPoster_path(jsonObject.getString("poster_path"))
-                            data_film.setOverview(jsonObject.getString("overview"))
-                            data_film.setTitle(jsonObject.getString("original_title"))
-                            data_film.setVote_average(jsonObject.getDouble("vote_average"))
+                            data_film.poster_path = jsonObject.getString("poster_path")
+                            data_film.overview = jsonObject.getString("overview")
+                            data_film.title = jsonObject.getString("original_title")
+                            data_film.vote_average = jsonObject.getDouble("vote_average")
 
-                            data_film.setId(jsonObject.getInt("id"))
+                            data_film.id = jsonObject.getInt("id")
 
 
                             (model_film as ArrayList<MFilm>).add(data_film)
@@ -662,7 +654,7 @@ class HomeMovieActivity : AppCompatActivity() {
     fun getGenrePetualangan() {
 
 
-        if (model_film.size > 0){
+        if (model_film.size > 0) {
             model_film.clear()
 
         }
@@ -695,12 +687,12 @@ class HomeMovieActivity : AppCompatActivity() {
 
 
 
-                            data_film.setPoster_path(jsonObject.getString("poster_path"))
-                            data_film.setOverview(jsonObject.getString("overview"))
-                            data_film.setTitle(jsonObject.getString("original_title"))
-                            data_film.setVote_average(jsonObject.getDouble("vote_average"))
+                            data_film.poster_path = jsonObject.getString("poster_path")
+                            data_film.overview = jsonObject.getString("overview")
+                            data_film.title = jsonObject.getString("original_title")
+                            data_film.vote_average = jsonObject.getDouble("vote_average")
 
-                            data_film.setId(jsonObject.getInt("id"))
+                            data_film.id = jsonObject.getInt("id")
 
 
                             (model_film as ArrayList<MFilm>).add(data_film)
@@ -756,7 +748,7 @@ class HomeMovieActivity : AppCompatActivity() {
     fun getGenreKomedi() {
 
 
-        if (model_film.size > 0){
+        if (model_film.size > 0) {
             model_film.clear()
 
         }
@@ -788,12 +780,12 @@ class HomeMovieActivity : AppCompatActivity() {
 
 
 
-                            data_film.setPoster_path(jsonObject.getString("poster_path"))
-                            data_film.setOverview(jsonObject.getString("overview"))
-                            data_film.setTitle(jsonObject.getString("original_title"))
-                            data_film.setVote_average(jsonObject.getDouble("vote_average"))
+                            data_film.poster_path = jsonObject.getString("poster_path")
+                            data_film.overview = jsonObject.getString("overview")
+                            data_film.title = jsonObject.getString("original_title")
+                            data_film.vote_average = jsonObject.getDouble("vote_average")
 
-                            data_film.setId(jsonObject.getInt("id"))
+                            data_film.id = jsonObject.getInt("id")
 
 
                             (model_film as ArrayList<MFilm>).add(data_film)
@@ -849,7 +841,7 @@ class HomeMovieActivity : AppCompatActivity() {
     fun getGenreHoror() {
 
 
-        if (model_film.size > 0){
+        if (model_film.size > 0) {
             model_film.clear()
 
         }
@@ -881,12 +873,12 @@ class HomeMovieActivity : AppCompatActivity() {
 
 
 
-                            data_film.setPoster_path(jsonObject.getString("poster_path"))
-                            data_film.setOverview(jsonObject.getString("overview"))
-                            data_film.setTitle(jsonObject.getString("original_title"))
-                            data_film.setVote_average(jsonObject.getDouble("vote_average"))
+                            data_film.poster_path = jsonObject.getString("poster_path")
+                            data_film.overview = jsonObject.getString("overview")
+                            data_film.title = jsonObject.getString("original_title")
+                            data_film.vote_average = jsonObject.getDouble("vote_average")
 
-                            data_film.setId(jsonObject.getInt("id"))
+                            data_film.id = jsonObject.getInt("id")
 
 
                             (model_film as ArrayList<MFilm>).add(data_film)
@@ -938,11 +930,6 @@ class HomeMovieActivity : AppCompatActivity() {
 
 
     }
-
-
-
-
-
 
 
 }

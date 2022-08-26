@@ -12,7 +12,7 @@ class WebNewsActivity : AppCompatActivity() {
 
     private lateinit var webView: WebView
 
-    lateinit var img : ImageView
+    lateinit var img: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

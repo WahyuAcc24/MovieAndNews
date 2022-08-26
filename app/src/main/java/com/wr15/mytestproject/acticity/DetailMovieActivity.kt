@@ -193,8 +193,8 @@ class DetailMovieActivity : AppCompatActivity() {
 
                         var data_review = MReview()
 
-                        data_review.setUsername(username)
-                        data_review.setContent(komen)
+                        data_review.username = username
+                        data_review.content = komen
 
                         (model_review as ArrayList<MReview>).add(data_review)
 
@@ -249,7 +249,7 @@ class DetailMovieActivity : AppCompatActivity() {
                         var data_genre = MGenre()
 
 
-                        data_genre.setName(jsonObject.getString("name"))
+                        data_genre.name = jsonObject.getString("name")
 
 
                         (model_genre as ArrayList<MGenre>).add(data_genre)

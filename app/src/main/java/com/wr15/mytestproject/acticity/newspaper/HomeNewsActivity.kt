@@ -48,7 +48,7 @@ class HomeNewsActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     private val TAG = HomeNewsActivity::class.java.getSimpleName()
     private var requesQueue: RequestQueue? = null
 
-    lateinit var swipeRefreshLayout : SwipeRefreshLayout
+    lateinit var swipeRefreshLayout: SwipeRefreshLayout
 
     var tag_json_obj = "json_obj_req"
 
@@ -93,10 +93,10 @@ class HomeNewsActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
 
 
-        swipeRefreshLayout.setOnRefreshListener(object: SwipeRefreshLayout.OnRefreshListener {
+        swipeRefreshLayout.setOnRefreshListener(object : SwipeRefreshLayout.OnRefreshListener {
             override fun onRefresh() {
                 // Handler untuk menjalankan jeda selama 5 detik
-                Handler().postDelayed(object:Runnable {
+                Handler().postDelayed(object : Runnable {
                     override fun run() {
                         // Berhenti berputar/refreshing
                         swipeRefreshLayout.setRefreshing(false)
@@ -363,14 +363,14 @@ class HomeNewsActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
                         var data_news = MNews()
 
-                        data_news.setName(nama_sumber)
-                        data_news.setContent(kontent)
-                        data_news.setUrlToImage(gambar)
-                        data_news.setUrl(url_berita)
-                        data_news.setDescription(deskripsi)
-                        data_news.setTitle(judul)
-                        data_news.setAuthor(penulis)
-                        data_news.setPublishedAt(tanggal)
+                        data_news.name = nama_sumber
+                        data_news.content = kontent
+                        data_news.urlToImage = gambar
+                        data_news.url = url_berita
+                        data_news.description = deskripsi
+                        data_news.title = judul
+                        data_news.author = penulis
+                        data_news.publishedAt = tanggal
 
 
 
@@ -464,14 +464,14 @@ class HomeNewsActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
                         var data_news = MNews()
 
-                        data_news.setName(nama_sumber)
-                        data_news.setContent(kontent)
-                        data_news.setUrlToImage(gambar)
-                        data_news.setUrl(url_berita)
-                        data_news.setDescription(deskripsi)
-                        data_news.setTitle(judul)
-                        data_news.setAuthor(penulis)
-                        data_news.setPublishedAt(tanggal)
+                        data_news.name = nama_sumber
+                        data_news.content = kontent
+                        data_news.urlToImage = gambar
+                        data_news.url = url_berita
+                        data_news.description = deskripsi
+                        data_news.title = judul
+                        data_news.author = penulis
+                        data_news.publishedAt = tanggal
 
 
                         model_news.add(data_news)
@@ -565,14 +565,14 @@ class HomeNewsActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
                         var data_news = MNews()
 
-                        data_news.setName(nama_sumber)
-                        data_news.setContent(kontent)
-                        data_news.setUrlToImage(gambar)
-                        data_news.setUrl(url_berita)
-                        data_news.setDescription(deskripsi)
-                        data_news.setTitle(judul)
-                        data_news.setAuthor(penulis)
-                        data_news.setPublishedAt(tanggal)
+                        data_news.name = nama_sumber
+                        data_news.content = kontent
+                        data_news.urlToImage = gambar
+                        data_news.url = url_berita
+                        data_news.description = deskripsi
+                        data_news.title = judul
+                        data_news.author = penulis
+                        data_news.publishedAt = tanggal
 
 
                         model_news.add(data_news)
@@ -665,14 +665,14 @@ class HomeNewsActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
                         var data_news = MNews()
 
-                        data_news.setName(nama_sumber)
-                        data_news.setContent(kontent)
-                        data_news.setUrlToImage(gambar)
-                        data_news.setUrl(url_berita)
-                        data_news.setDescription(deskripsi)
-                        data_news.setTitle(judul)
-                        data_news.setAuthor(penulis)
-                        data_news.setPublishedAt(tanggal)
+                        data_news.name = nama_sumber
+                        data_news.content = kontent
+                        data_news.urlToImage = gambar
+                        data_news.url = url_berita
+                        data_news.description = deskripsi
+                        data_news.title = judul
+                        data_news.author = penulis
+                        data_news.publishedAt = tanggal
 
                         model_news.add(data_news)
 
@@ -765,14 +765,14 @@ class HomeNewsActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
                         var data_news = MNews()
 
-                        data_news.setName(nama_sumber)
-                        data_news.setContent(kontent)
-                        data_news.setUrlToImage(gambar)
-                        data_news.setUrl(url_berita)
-                        data_news.setDescription(deskripsi)
-                        data_news.setTitle(judul)
-                        data_news.setAuthor(penulis)
-                        data_news.setPublishedAt(tanggal)
+                        data_news.name = nama_sumber
+                        data_news.content = kontent
+                        data_news.urlToImage = gambar
+                        data_news.url = url_berita
+                        data_news.description = deskripsi
+                        data_news.title = judul
+                        data_news.author = penulis
+                        data_news.publishedAt = tanggal
 
                         model_news.add(data_news)
 
@@ -873,7 +873,9 @@ class HomeNewsActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         loading.show()
 
         val jsonObjectRequest = object : JsonObjectRequest(
-            Request.Method.GET, ServerNewsHost.SEARCH + ServerNewsHost.API_SEARCH + "&q=" + keyword, null,
+            Request.Method.GET,
+            ServerNewsHost.SEARCH + ServerNewsHost.API_SEARCH + "&q=" + keyword,
+            null,
             { response ->
                 Log.e(TAG, "Login Response: $response")
 
@@ -904,14 +906,14 @@ class HomeNewsActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
                         var data_news = MNews()
 
-                        data_news.setName(nama_sumber)
-                        data_news.setContent(kontent)
-                        data_news.setUrlToImage(gambar)
-                        data_news.setUrl(url_berita)
-                        data_news.setDescription(deskripsi)
-                        data_news.setTitle(judul)
-                        data_news.setAuthor(penulis)
-                        data_news.setPublishedAt(tanggal)
+                        data_news.name = nama_sumber
+                        data_news.content = kontent
+                        data_news.urlToImage = gambar
+                        data_news.url = url_berita
+                        data_news.description = deskripsi
+                        data_news.title = judul
+                        data_news.author = penulis
+                        data_news.publishedAt = tanggal
 
                         model_news.add(data_news)
 
@@ -940,7 +942,8 @@ class HomeNewsActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
                 } catch (e: JSONException) {
                     loading.hide()
                     e.printStackTrace()
-                    Toast.makeText(applicationContext, "Data tidak ditemukan ", Toast.LENGTH_LONG).show()
+                    Toast.makeText(applicationContext, "Data tidak ditemukan ", Toast.LENGTH_LONG)
+                        .show()
                 }
 
 
